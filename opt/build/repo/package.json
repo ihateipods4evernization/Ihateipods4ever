@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "webpack serve",
-    "build": "npx vite build",
+    "build": "webpack",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node dist/app.js",
+    "run": "node dist/app.js",
+    "debug": "node --inspect dist/app.js"
   },
   "dependencies": {
     "@types/express": "^4.17.21",

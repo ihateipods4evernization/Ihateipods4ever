@@ -19,10 +19,11 @@
         },
         
         {
-            "command": "npm start",
+            "type": "node",
             "name": "Run npm start",
             "request": "launch",
-            "type": "node-terminal"
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["start"]
         },
 
         {
@@ -35,6 +36,7 @@
             "type": "node"
         },
         {
+            "type": "node",
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
@@ -42,9 +44,10 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "node"
+            "preLaunchTask": "npm: build" // Ensure this matches your build script
         },
         {
+            "type": "node",
             "args": [
                 "-u",
                 "tdd",
@@ -60,8 +63,7 @@
             "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v23.9.0/bin/node", // Set the correct path to node
             "skipFiles": [
                 "<node_internals>/**"
-            ],
-            "type": "node"
+            ]
         },
         {
             "type": "chrome",
