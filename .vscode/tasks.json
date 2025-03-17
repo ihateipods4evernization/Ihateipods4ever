@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "opt/build/repo",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - opt/build/repo",
+			"detail": "webpack"
+		},
+		{
+			"type": "npm",
+			"script": "preview",
+			"path": "opt/build/repo",
+			"problemMatcher": [],
+			"label": "npm: preview - opt/build/repo",
+			"detail": "vite preview"
+		}
+	]
+}

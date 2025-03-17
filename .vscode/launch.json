@@ -19,11 +19,10 @@
         },
         
         {
-            "type": "node",
+            "type": "node-terminal",
+            "command": "npm start",
             "name": "Run npm start",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["start"]
+            "request": "launch"
         },
 
         {
@@ -81,13 +80,10 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/server.js"
         }
-    ]
+    ],
+    "scripts": {
+        "debug": "node --inspect-brk app.js"
+        // other scripts...
+    }
 }
