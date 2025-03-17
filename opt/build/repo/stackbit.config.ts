@@ -1,9 +1,1 @@
-import { defineStackbitConfig } from '@stackbit/types';
-
-export default defineStackbitConfig({
-    "stackbitVersion": "~0.6.0",
-    "nodeVersion": "18",
-    "ssgName": "custom",
-    "contentSources": [],
-    "postInstallCommand": "npm i --no-save @stackbit/types"
-})
+<html><head></head><body style="overflow-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;"><div>import { ContentfulContentSource } from '@stackbit/cms-contentful'</div><div>import {</div><div>&nbsp; defineStackbitConfig,</div><div>&nbsp; getLocalizedFieldForLocale,</div><div>&nbsp; SiteMapEntry,</div><div>} from '@stackbit/types'</div><div><br></div><div>export default defineStackbitConfig({</div><div>&nbsp; stackbitVersion: '~0.6.0',</div><div>&nbsp; contentSources: [new ContentfulContentSource(/* ... */)],</div><div>&nbsp; modelExtensions: [{ name: 'page', type: 'page', urlPath: '/{slug}' }],</div><div>&nbsp; siteMap: ({ documents, models }) =&gt; {</div><div>&nbsp; &nbsp; const pageModels = models</div><div>&nbsp; &nbsp; &nbsp; .filter((m) =&gt; m.type === 'page')</div><div>&nbsp; &nbsp; &nbsp; .map((m) =&gt; m.name)</div><div>&nbsp; &nbsp; return documents</div><div>&nbsp; &nbsp; &nbsp; .filter((d) =&gt; pageModels.includes(d.modelName))</div><div>&nbsp; &nbsp; &nbsp; .map((document) =&gt; {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; const slug = getLocalizedFieldForLocale(document.fields.slug)</div><div>&nbsp; &nbsp; &nbsp; &nbsp; if (!slug.value) return null</div><div>&nbsp; &nbsp; &nbsp; &nbsp; const urlPath = '/' + slug.value.replace(/^\/+/, '')</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stableId: document.id,</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; urlPath,</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document,</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; isHomePage: urlPath === '/',</div><div>&nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; })</div><div>&nbsp; &nbsp; &nbsp; .filter(Boolean) as SiteMapEntry[]</div><div>&nbsp; },</div><div>})</div><div><br></div></body></html>
