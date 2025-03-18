@@ -11,7 +11,7 @@
                 "run-script",
                 "debug"
             ],
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v23.9.0/bin/npm", // Set the correct path to npm
+            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/npm", // Set the correct path to npm
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -39,7 +39,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v23.9.0/bin/node", // Set the correct path to node
+            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/node", // Set the correct path to node
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -59,7 +59,7 @@
             "name": "Mocha Tests",
             "program": "mocha",
             "request": "launch",
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v23.9.0/bin/node", // Set the correct path to node
+            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/node", // Set the correct path to node
             "skipFiles": [
                 "<node_internals>/**"
             ]
@@ -81,9 +81,5 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         }
-    ],
-    "scripts": {
-        "debug": "node --inspect-brk app.js"
-        // other scripts...
-    }
+    ]
 }
