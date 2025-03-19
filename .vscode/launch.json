@@ -30,23 +30,6 @@
             "request": "launch",
             "type": "extensionHost"
         },
-
-
-
-
-        {
-            "name": "Launch via NPM",
-            "request": "launch",
-            "runtimeArgs": [
-                "run-script",
-                "debug"
-            ],
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        },
         {
             "type": "node-terminal",
             "command": "npm start",
@@ -88,10 +71,11 @@
             "program": "mocha",
             "request": "launch",
             "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/node",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
-        },
+                "skipFiles": [
+                    "<node_internals>/**"
+                ]
+            }
+        }
         {
             "type": "chrome",
             "request": "launch",
