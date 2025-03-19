@@ -47,6 +47,17 @@
 			"problemMatcher": [],
 			"label": "npm: install - opt/build/repo",
 			"detail": "install dependencies from package"
+		},
+		{
+			"type": "java (build)",
+			"paths": [
+				"${workspace}"
+			],
+			"isFullBuild": true,
+			"group": "build",
+			"problemMatcher": [],
+			"label": "java (build): Build Workspace",
+			"detail": "$(tools) Build all the Java projects in workspace."
 		}
 	]
 }
