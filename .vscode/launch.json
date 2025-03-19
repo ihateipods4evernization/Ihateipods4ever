@@ -128,6 +128,21 @@
             "presentation": {
                 "hidden": true
             }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program with Env",
+            "program": "${workspaceFolder}/app.js",
+            "runtimeExecutable": "node",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG": "app:*"
+            },
+            "preLaunchTask": "npm: build"
         }
     ],
     "compounds": [
