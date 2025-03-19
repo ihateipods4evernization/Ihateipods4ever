@@ -17,7 +17,6 @@
             ],
             "type": "node"
         },
-
         {
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
@@ -50,7 +49,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/node",
+            "runtimeExecutable": "node",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -70,12 +69,11 @@
             "name": "Mocha Tests",
             "program": "mocha",
             "request": "launch",
-            "runtimeExecutable": "/home/ihateipods4ever/.nvm/versions/node/v14.17.0/bin/node",
-                "skipFiles": [
-                    "<node_internals>/**"
-                ]
-            }
-        }
+            "runtimeExecutable": "node",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
         {
             "type": "chrome",
             "request": "launch",
@@ -94,7 +92,8 @@
             ],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "runtimeExecutable": "node"
         },
         {
             "type": "msedge",
@@ -103,7 +102,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -116,7 +115,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -125,7 +124,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html", // Provide your project's url to finish configuring
+            "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html",
             "presentation": {
                 "hidden": true
             }
