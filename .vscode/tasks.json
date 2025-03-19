@@ -5,7 +5,7 @@
 			"type": "npm",
 			"script": "build",
 			"path": "opt/build/repo",
-			"group": "build",
+			"group": "none",
 			"problemMatcher": [],
 			"label": "npm: build - opt/build/repo",
 			"detail": "webpack"
@@ -26,7 +26,7 @@
 				"bin",
 				"src/**/*.java"
 			],
-			"group": "build",
+			"group": "none",
 			"problemMatcher": [],
 			"label": "java: Build Workspace",
 			"detail": "$(tools) Build all the Java projects in workspace."
@@ -38,6 +38,15 @@
 			"problemMatcher": [],
 			"label": "npm: dev - opt/build/repo",
 			"detail": "webpack serve"
+		},
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "opt/build/repo",
+			"group": "none",
+			"problemMatcher": [],
+			"label": "npm: install - opt/build/repo",
+			"detail": "install dependencies from package"
 		}
 	]
 }
