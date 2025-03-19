@@ -26,7 +26,7 @@
 				"bin",
 				"src/**/*.java"
 			],
-			"group": "none",
+			"group": "build",
 			"problemMatcher": [],
 			"label": "java: Build Workspace",
 			"detail": "$(tools) Build all the Java projects in workspace."
@@ -47,6 +47,17 @@
 			"problemMatcher": [],
 			"label": "npm: install - opt/build/repo",
 			"detail": "install dependencies from package"
+		},
+		{
+			"type": "shell",
+			"command": "sfdx",
+			"args": [
+				"force:source:push"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "sfdx: Push Source to Org",
+			"detail": "Push source to a Salesforce org"
 		},
 		{
 			"type": "java (build)",
