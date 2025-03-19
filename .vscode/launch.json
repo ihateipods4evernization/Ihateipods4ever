@@ -17,14 +17,12 @@
             ],
             "type": "node"
         },
-        
         {
             "type": "node-terminal",
             "command": "npm start",
             "name": "Run npm start",
             "request": "launch"
         },
-
         {
             "name": "Attach",
             "port": 9229,
