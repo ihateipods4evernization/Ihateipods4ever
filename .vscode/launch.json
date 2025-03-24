@@ -2,6 +2,12 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "npm start",
+      "name": "Run npm start",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "name": "Launch via NPM",
       "request": "launch",
       "runtimeArgs": [
@@ -118,7 +124,7 @@
       }
     },
     {
-      "type": "vscode-edge-devtools.debug",
+      "type": "chrome",
       "name": "Open Edge DevTools",
       "request": "attach",
       "url": "/home/ihateipods4ever/.var/app/com.visualstudio.code/data/vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.8/out/startpage/index.html",
@@ -143,22 +149,11 @@
     },
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "node",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
       "cwd": "/home/ihateipods4ever/Ihateipods4ever",
       "program": "/home/ihateipods4ever/Ihateipods4ever/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
     }
   ],
   "compounds": [
